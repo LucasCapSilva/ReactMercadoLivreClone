@@ -7,9 +7,6 @@ const theme = createTheme({
     },
     secondary: {
       main: '#EDF1F0'
-    },
-    info: {
-      main: '#EDF1F0'
     }
   },
 });

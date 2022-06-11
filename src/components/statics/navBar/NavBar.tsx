@@ -10,7 +10,8 @@ import theme from '../../../theme/ThemeMercado'
 import { ThemeProvider} from '@mui/material/styles';
 import { Avatar } from '@mui/material';
 import MenuNav from './menuNav/MenuNav';
-
+import { Link } from 'react-router-dom';
+import './NavBar.css'
 
 
 
@@ -21,9 +22,11 @@ const NavBar = () => {
       <AppBar position="static">
         <Toolbar>
           <Box marginX={5}>
+          <Link to="/home" className="text-decorator-none">
             <Avatar alt="Example Alt"
               sx={{ width: 160, height: 60 }}
               src="https://oombe.com/assets/img/mercadolivre_nova_logo.png" />
+              </Link>
           </Box>
 
 
@@ -43,7 +46,11 @@ const NavBar = () => {
           </Box>
 
           <Box marginLeft={7} >
-            <Button color="inherit">Categoria</Button>
+          <Link to="/produtos" className="text-decorator-none">
+     
+            <Button className='cursor'>Categoria</Button>
+        
+            </Link>
             <Button color="inherit">Oferta do dia</Button>
             <Button color="inherit">Supermercado</Button>
             <Button color="inherit">Moda</Button>

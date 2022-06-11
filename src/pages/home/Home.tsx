@@ -2,13 +2,12 @@ import { Box, Button,CardMedia, Typography } from '@mui/material'
 import React from 'react'
 import CarouselCategoria from '../../components/statics/carouselCategoria/CarouselCategoria'
 import CarouselPromo from '../../components/statics/carouselPromo/CarouselPromo'
-import Footer from '../../components/statics/footer/Footer'
-import NavBar from '../../components/statics/navBar/NavBar'
+
 
 const Home = () => {
   return (
     <>
-      <NavBar></NavBar>
+     
 
       <CarouselPromo />
 
@@ -248,7 +247,7 @@ const Home = () => {
 
       </Box>
 
-      <Footer />
+     
     </>
 
   )
