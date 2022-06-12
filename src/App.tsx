@@ -9,28 +9,25 @@ import { Produtos } from './pages/produtos/Produtos';
 
 function App() {
   return (
-<>
+    <>
 
       <Router>
         <NavBar />
-  
+
         <Routes>
-        
-            <Route path="/" element={<Home />} />
 
-            <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
 
-            <Route path="/produtos" element={<Produtos />} />
+          <Route path="/home" element={<Home />} />
 
-           
+          <Route path="/produtos" element={<Produtos />} />
 
-         
         </Routes>
- 
+
         <Footer />
 
       </Router>
-      </>
+    </>
   );
 }
 

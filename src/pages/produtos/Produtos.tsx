@@ -9,7 +9,6 @@ const styleBackgroud = {
 }
 
 
-
 const commonStyles = {
     bgcolor: '#FFFFFF',
     m: 1,
