@@ -16,6 +16,7 @@ npm install
 ## Start app 
 
 npm start
+
 acesse http://localhost:3000 no browser.
 
 
