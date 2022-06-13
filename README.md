@@ -8,19 +8,12 @@ Exemplo de aplicação mobile/web utilizando NativeScript e Angular.
 
 
 ## Instalação:
-execute npm install -g nativescript.
+execute npm install -g create-react-app
 execute npm install na pasta raiz.
-baixe o NativeScript Playground na https://play.google.com/store/apps/details?id=org.nativescript.play&hl=pt_BR.
-baixe o NativeScript Preview https://play.google.com/store/apps/details?id=org.nativescript.preview&hl=pt_BR.
-ou na App store para dispositivos Ios.
 
-## Start app v Web:
+## Start app 
 
-execute ng serve na pasta raiz.
-acesse http://localhost:4200/ no browser.
+npm start
+acesse http://localhost:3000 no browser.
 
-## Start app v Mobile:
 
-execute tns preview na pasta raiz
-abra o app no smartphone e acesse o QR code da aplicação.
-execute tns build [android/ios] para fazer build para mobile
