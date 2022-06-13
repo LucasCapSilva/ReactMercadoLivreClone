@@ -1,5 +1,5 @@
-# IFeira-Nativescript-Angular-Web-mobile-app-
-Exemplo de aplicação mobile/web utilizando NativeScript e Angular.
+# ReactMercadoLivreClone
+Exemplo de aplicação web utilizando react JS.
 
 ## versão Web
 
