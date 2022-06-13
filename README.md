@@ -3,8 +3,8 @@ Exemplo de aplicação mobile/web utilizando NativeScript e Angular.
 
 ## versão Web
 
-![tela principal](https://imgur.com/2OyUhNy)
-![produtos](https://imgur.com/q8x3zmk)
+![tela principal](https://i.imgur.com/2OyUhNy.png)
+![produtos](https://i.imgur.com/q8x3zmk.png)
 
 
 ## Instalação:
