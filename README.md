@@ -8,8 +8,10 @@ Exemplo de aplicação web utilizando react JS.
 
 
 ## Instalação:
-execute npm install -g create-react-app
-execute npm install na pasta raiz.
+npm install -g create-react-app
+
+npm install
+
 
 ## Start app 
 
