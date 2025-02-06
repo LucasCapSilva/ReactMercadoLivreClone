@@ -1,59 +1,21 @@
-import React from 'react'
-import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
-
-
-const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: "white",
-   
-   
-  }));
-  
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }));
-  
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-      padding: theme.spacing(1, 40, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create('width'),
-      width: '100%',
-    
-    },
-  }));
-
-function MenuNav() {
+const MenuNav: React.FC = () => {
   return (
-  <>
-    <Box marginLeft={1} marginRight="auto">
-  
-   
-    <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Buscar produtos e marcas "
-              inputProps={{ 'aria-label': 'Buscar produtos, marcas e muito mais...' }}
-            />
-          </Search>
-      </Box>
-  </>
-    
-  )
-}
+    <>
+      <div className="ml-4 mr-auto">
+        <div className="relative rounded-md bg-white">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+           
+          </div>
+          <input
+            type="text"
+            placeholder="Buscar produtos e marcas"
+            aria-label="Buscar produtos, marcas e muito mais..."
+            className="w-full pl-10 pr-40 py-2 rounded-md text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default MenuNav
+export default MenuNav;

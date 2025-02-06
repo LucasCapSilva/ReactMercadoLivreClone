@@ -1,75 +1,72 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-
-
-import theme from '../../../theme/ThemeMercado'
-
-import { ThemeProvider } from '@mui/material/styles';
-import { Avatar } from '@mui/material';
-import MenuNav from './menuNav/MenuNav';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavBar.css'
+import MenuNav from './menuNav/MenuNav'; // Certifique-se de que o componente MenuNav está adaptado para Tailwind
 
-
-
-
-const NavBar = () => {
+const NavBar: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <AppBar position="static">
-        <Toolbar>
-          <Box marginX={5}>
-            <Link to="/home" className="text-decorator-none">
-              <Avatar alt="Example Alt"
-                sx={{ width: 160, height: 60 }}
-                src="https://oombe.com/assets/img/mercadolivre_nova_logo.png" />
-            </Link>
-          </Box>
+    <nav className="bg-primary-main shadow-md">
+      {/* Primeira linha da barra de navegação */}
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between p-4">
+        {/* Logo */}
+        <div className="mx-5 mb-4 md:mb-0">
+          <Link to="/home">
+            <img
+              src="https://oombe.com/assets/img/mercadolivre_nova_logo.png"
+              alt="Logo"
+              className="w-40 h-15"
+            />
+          </Link>
+        </div>
 
-
+        {/* Componente MenuNav */}
+        <div className="w-full md:w-auto mb-4 md:mb-0">
           <MenuNav />
-          <Box marginLeft='auto'>
-            <Avatar alt="Example Alt"
-              sx={{ width: 100, height: 70 }}
-              src="https://logospng.org/download/disneyplus/logo-disneyplus-256.png" />
+        </div>
 
-          </Box>
-          <Button color="inherit">Assine o nivel 6 por R$ 9,90</Button>
-        </Toolbar>
-        <Toolbar>
-          <Box marginX={5} >
-            <Button color="inherit">endereço</Button>
+        {/* Avatar e Botão de Assinatura */}
+        <div className="ml-auto flex items-center">
+          <button className="ml-4 text-black hover:text-gray-200 whitespace-nowrap">
+            Assine o nível 6 por R$ 9,90
+          </button>
+        </div>
+      </div>
 
-          </Box>
+      {/* Segunda linha da barra de navegação */}
+      <div className="container mx-auto flex flex-col md:flex-row items-center p-4">
+        {/* Endereço */}
+        <div className="mx-5 mb-4 md:mb-0">
+          <button className="text-black hover:text-gray-200">Endereço</button>
+        </div>
 
-          <Box marginLeft={7} >
-            <Link to="/produtos" className="text-decorator-none">
-              <Button className='cursor'>Produtos</Button>
-            </Link>
-            <Button color="inherit">Oferta do dia</Button>
-            <Button color="inherit">Supermercado</Button>
-            <Button color="inherit">Moda</Button>
-            <Button color="inherit">Live</Button>
-            <Button color="inherit">Vender</Button>
-            <Button color="inherit">Contato</Button>
-          </Box>
+        {/* Links de Navegação */}
+        <div className="ml-7 flex flex-wrap justify-center space-x-4 mb-4 md:mb-0">
+          <Link to="/produtos">
+            <button className="text-black hover:text-gray-200 cursor-pointer">
+              Produtos
+            </button>
+          </Link>
+          <button className="text-black hover:text-gray-200">Oferta do dia</button>
+          <button className="text-black hover:text-gray-200">Supermercado</button>
+          <button className="text-black hover:text-gray-200">Moda</button>
+          <button className="text-black hover:text-gray-200">Live</button>
+          <button className="text-black hover:text-gray-200">Vender</button>
+          <button className="text-black hover:text-gray-200">Contato</button>
+          <button className="text-black hover:text-gray-200">User</button>
+          <button className="text-black hover:text-gray-200">Compras</button>
+          <button className="text-black hover:text-gray-200">Supermercado</button>
+          <button className="text-black hover:text-gray-200">Favoritos</button>
+        </div>
 
-          <Box marginLeft={1} >
-            <Button color="inherit">User</Button>
-            <Button color="inherit">Compras</Button>
-            <Button color="inherit">Supermercado</Button>
-            <Button color="inherit">Favoritos</Button>
+        {/* Links do Usuário
+        <div className=" flex flex-wrap justify-center space-x-4">
+          <button className="text-black hover:text-gray-200">User</button>
+          <button className="text-black hover:text-gray-200">Compras</button>
+          <button className="text-black hover:text-gray-200">Supermercado</button>
+          <button className="text-black hover:text-gray-200">Favoritos</button>
+        </div> */}
+      </div>
+    </nav>
+  );
+};
 
-          </Box>
-        </Toolbar>
-      </AppBar>
-
-
-    </ThemeProvider>
-  )
-}
-
-export default NavBar 
+export default NavBar;

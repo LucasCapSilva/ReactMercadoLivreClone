@@ -1,41 +1,42 @@
-import { Box, Button, Toolbar, Typography } from '@mui/material'
-import theme from '../../../theme/ThemeMercado'
-import React from 'react'
-import { ThemeProvider } from 'react-bootstrap'
+﻿import React from 'react';
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
-        <ThemeProvider theme={theme}>
-            <Box marginTop={5}>
+        <div className="mt-20 mb-3 px-4 sm:px-6 lg:px-8">
+            {/* Links do Footer */}
+            <div className="flex flex-wrap justify-start gap-2 sm:gap-4 sm:ml-28">
+                <button className="text-gray-700 text-sm mx-2 hover:text-gray-900">
+                    Trabalhe conosco
+                </button>
+                <button className="text-gray-700 text-sm mx-2 hover:text-gray-900">
+                    Termos e condições
+                </button>
+                <button className="text-gray-700 text-sm mx-2 hover:text-gray-900">
+                    Como cuidamos da sua privacidade
+                </button>
+                <button className="text-gray-700 text-sm mx-2 hover:text-gray-900">
+                    Contato
+                </button>
+                <button className="text-gray-700 text-sm mx-2 hover:text-gray-900">
+                    Informações sobre seguros
+                </button>
+            </div>
 
-                <Toolbar>
+            {/* Texto de Copyright */}
+            <div className="flex justify-start sm:ml-28 mt-4">
+                <p className="text-gray-700 text-sm text-justify">
+                    Copyright © 1999-2022 Ebazar.com.br LTDA
+                </p>
+            </div>
 
+            {/* Informações da Empresa */}
+            <div className="flex justify-start sm:ml-28 mt-2">
+                <p className="text-gray-700 text-sm text-justify">
+                    CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre
+                </p>
+            </div>
+        </div>
+    );
+};
 
-                    <Box marginLeft={7} >
-                        <Button color="inherit" size='small'>Trabalhe conosco</Button>
-                        <Button color="inherit" size='small'>Termos e condições</Button>
-                        <Button color="inherit" size='small'>Como cuidamos da sua privacidade</Button>
-                        <Button color="inherit" size='small'>Contato</Button>
-                        <Button color="inherit" size='small'>Informações sobre seguros</Button>
-
-                    </Box>
-
-
-                </Toolbar>
-                <Toolbar>
-                    <Box marginLeft={7} >
-                        <Typography variant="body1" textAlign="justify" color="initial">
-                            Copyright © 1999-2022 Ebazar.com.br LTDA
-                        </Typography>
-
-                        <Typography variant="body1" textAlign="justify" color="initial">
-                            CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre
-                        </Typography>
-                    </Box>
-                </Toolbar>
-            </Box>
-        </ThemeProvider>
-    )
-}
-
-export default Footer
+export default Footer;
