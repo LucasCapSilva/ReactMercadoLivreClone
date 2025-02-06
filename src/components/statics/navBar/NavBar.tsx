@@ -57,13 +57,7 @@ const NavBar: React.FC = () => {
           <button className="text-black hover:text-gray-200">Favoritos</button>
         </div>
 
-        {/* Links do Usuário
-        <div className=" flex flex-wrap justify-center space-x-4">
-          <button className="text-black hover:text-gray-200">User</button>
-          <button className="text-black hover:text-gray-200">Compras</button>
-          <button className="text-black hover:text-gray-200">Supermercado</button>
-          <button className="text-black hover:text-gray-200">Favoritos</button>
-        </div> */}
+     
       </div>
     </nav>
   );
